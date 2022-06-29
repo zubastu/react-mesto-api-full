@@ -1,6 +1,6 @@
 const allowedCors = [
-  'http://api.zubastu.nomoreparties.sbs',
-  'https://api.zubastu.nomoreparties.sbs',
+  'http://zubastu.nomoreparties.sbs',
+  'https://zubastu.nomoreparties.sbs',
   'http://localhost:3000',
   'https://localhost:3000',
 ];

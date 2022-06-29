@@ -1,15 +1,14 @@
-[![Tests](https://github.com/zubastu/express-mesto-gha/actions/workflows/tests-13-sprint.yml/badge.svg)](https://github.com/zubastu/express-mesto-gha/actions/workflows/tests-13-sprint.yml) [![Tests](https://github.com/zubastu/express-mesto-gha/actions/workflows/tests-14-sprint.yml/badge.svg)](https://github.com/zubastu/express-mesto-gha/actions/workflows/tests-14-sprint.yml)
 # Проект Mesto фронтенд + бэкенд
 
-## Директории
+## Публичный IP 
+`178.154.197.112
 
-`/routes` — папка с файлами роутера  
-`/controllers` — папка с файлами контроллеров пользователя и карточки   
-`/models` — папка с файлами описания схем пользователя и карточки  
-  
-Остальные директории вспомогательные, создаются при необходимости разработчиком
 
-## Запуск проекта
+## Ссылка на Frontend 
+`https://zubastu.nomoredomains.xyz/
+`http://zubastu.nomoredomains.xyz/
 
-`npm run start` — запускает сервер   
-`npm run dev` — запускает сервер с hot-reload
+
+## Ссылка на API сервера 
+`https://api.zubastu.nomoreparties.sbs/
+`http://api.zubastu.nomoreparties.sbs

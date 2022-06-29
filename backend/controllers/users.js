@@ -5,6 +5,8 @@ const { checkBadData } = require('../utils/errors');
 const ValidationError = require('../utils/ValidationError');
 const UsedEmail = require('../utils/UsedEmail');
 
+const { NODE_ENV, JWT_SECRET } = process.env;
+
 module.exports.getUsers = (req, res, next) => {
   User.find({})
     .then((users) => checkBadData(users, res))
@@ -88,7 +90,11 @@ module.exports.login = (req, res, next) => {
 
   return User.findUserByCredentials(email, password)
     .then((user) => {
-      const token = jwt.sign({ _id: user._id }, 'some-secret-key', { expiresIn: '7d' });
+      const token = jwt.sign(
+        { _id: user._id },
+        NODE_ENV === 'production' ? JWT_SECRET : 'some',
+        { expiresIn: '7d' },
+      );
       const { name, userEmail, avatar } = user;
 
       return res.send({

@@ -1,6 +1,9 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+
 const { celebrate, Joi, errors } = require('celebrate');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
@@ -25,6 +28,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors);
 
 app.use(requestLogger);
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 
 app.post('/signin', celebrate({
   body: Joi.object().keys({
